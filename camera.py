@@ -51,6 +51,8 @@ class Camera:
         keys = pg.key.get_pressed()
         if keys[pg.K_w]:
             self.position += self.forward * velocity
+        if keys[pg.K_LSHIFT] and [pg.K_w]:
+            self.position += self.forward * velocity * 2
         if keys[pg.K_s]:
             self.position -= self.forward * velocity
         if keys[pg.K_a]:
