@@ -1,7 +1,7 @@
 import glm
 import pygame as pg
 
-FOV = 50  # deg
+FOV = 90  # deg
 NEAR = 0.1
 FAR = 100
 SPEED = 0.005
@@ -47,12 +47,12 @@ class Camera:
         self.m_view = self.get_view_matrix()
 
     def move(self):
-        velocity = SPEED * self.app.delta_time
+        velocity = (SPEED * self.app.delta_time)
         keys = pg.key.get_pressed()
+        if keys[pg.K_LSHIFT]:
+            velocity = velocity * 2
         if keys[pg.K_w]:
             self.position += self.forward * velocity
-        if keys[pg.K_LSHIFT] and [pg.K_w]:
-            self.position += self.forward * velocity * 2
         if keys[pg.K_s]:
             self.position -= self.forward * velocity
         if keys[pg.K_a]:

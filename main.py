@@ -8,7 +8,6 @@ from mesh import Mesh
 from scene import Scene
 from scene_renderer import SceneRenderer
 
-
 class GraphicsEngine:
     def __init__(self, win_size=(1600, 900)):
         # init pygame modules

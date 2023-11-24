@@ -18,10 +18,16 @@ class Scene:
         add = self.add_object
 
         # floor
-        n, s = 20, 2
+        n, s = 30, 2
         for x in range(-n, n, s):
             for z in range(-n, n, s):
                 add(Cube(app, pos=(x, -s, z)))
+        
+        # 
+        n, s = 15, 2
+        for x in range(-n, n, s):
+            for z in range(-n, n, s):
+                add(Cube(app, pos=(x, s+16, z)))
 
         # columns
         for i in range(9):
