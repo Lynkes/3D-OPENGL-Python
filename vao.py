@@ -23,11 +23,31 @@ class VAO:
         self.vaos['cat'] = self.get_vao(
             program=self.program.programs['default'],
             vbo=self.vbo.vbos['cat'])
-
+        
         # shadow cat vao
         self.vaos['shadow_cat'] = self.get_vao(
             program=self.program.programs['shadow_map'],
             vbo=self.vbo.vbos['cat'])
+        
+        # girl vao
+        self.vaos['girl'] = self.get_vao(
+            program=self.program.programs['default'],
+            vbo=self.vbo.vbos['girl'])
+        
+        # shadow girl vao
+        self.vaos['shadow_girl'] = self.get_vao(
+            program=self.program.programs['shadow_map'],
+            vbo=self.vbo.vbos['girl'])
+        
+        # House vao
+        self.vaos['house'] = self.get_vao(
+            program=self.program.programs['default'],
+            vbo=self.vbo.vbos['house'])
+        
+        # shadow house vao
+        self.vaos['shadow_house'] = self.get_vao(
+            program=self.program.programs['shadow_map'],
+            vbo=self.vbo.vbos['house'])
 
         # skybox vao
         self.vaos['skybox'] = self.get_vao(

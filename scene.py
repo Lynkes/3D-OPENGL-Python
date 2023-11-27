@@ -1,7 +1,6 @@
 from model import *
 import glm
 
-
 class Scene:
     def __init__(self, app):
         self.app = app
@@ -37,8 +36,18 @@ class Scene:
         # cat
         add(Cat(app, pos=(0, -1, -10)))
 
+        # girl
+        add(girl(app, pos=(5, 3, 20)))
+
+        # house
+        #add(house(app, pos=(0, 1, 10)))
+
+        # moving cat
+        #self.moving_cube = Cat(app, pos=(0, -1, -10))
+        #add(self.moving_cube)
+
         # moving cube
-        self.moving_cube = MovingCube(app, pos=(0, 6, 8), scale=(3, 3, 3), tex_id=1)
+        self.moving_cube = MovingCube(app, pos=(0, 8, 8), scale=(3, 3, 3), tex_id=1)
         add(self.moving_cube)
 
     def update(self):

@@ -12,6 +12,8 @@ class Texture:
         self.textures[1] = self.get_texture(path='textures/img_1.png')
         self.textures[2] = self.get_texture(path='textures/img_2.png')
         self.textures['cat'] = self.get_texture(path='objects/cat/20430_cat_diff_v1.jpg')
+        self.textures['girl'] = self.get_texture(path='objects/girl-obj/BOdy Skin Base Color.png')
+        self.textures['house'] = self.get_texture(path='textures/test.png')
         self.textures['skybox'] = self.get_texture_cube(dir_path='textures/skybox1/', ext='png')
         self.textures['depth_texture'] = self.get_depth_texture()
 
